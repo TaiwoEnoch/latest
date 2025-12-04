@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        body {
+            background: #fff;
+            color: #222;
+        }
+
+        /* HERO */
+        .review-hero {
+            text-align: center;
+            padding: 140px 20px 80px;
+            background: linear-gradient(#00000046, #00000062), url("https://ilovekoop.com/cdn/shop/collections/19_ac655289-5b48-4985-a878-f71ac6cca967.png?v=1731419433&width=2400");
+            background-position: center;
+            background-size: cover;
+            color: white;
+            animation: fadeIn 1.2s ease;
+        }
+
+        .review-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .review-hero p {
+            font-size: 1.2rem;
+        }
+
+        /* REVIEWS GRID */
+        .reviews-section {
+            width: 90%;
+            margin: auto;
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .review-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .stars {
+            color: #4CAF50;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* TESTIMONIAL SLIDER */
+        .testimonial-container {
+            text-align: center;
+            padding: 60px 20px;
+            background: #f7f7f7;
+            margin-top: 40px;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .slider {
+            max-width: 650px;
+            margin: auto;
+            position: relative;
+        }
+
+        .slide {
+            display: none;
+            font-size: 1.1rem;
+            animation: fadeIn 1s ease;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .slider-btns {
+            margin-top: 20px;
+        }
+
+        .slider-btns i {
+            font-size: 25px;
+            cursor: pointer;
+            color: #444;
+            padding: 10px;
+        }
+
+        .slider-btns i:hover {
+            color: #000;
+        }
+
+        /* ANIMATIONS */
+        .fade-in {
+            animation: fadeIn 1.2s ease forwards;
+        }
+        .slide-up {
+            animation: slideUp 1s ease forwards;
+        }
+        .zoom-in {
+            animation: zoomIn 1.2s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Reveal on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.8s ease;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html" class="logo">Logo</a>
+    
+            <!-- Hamburger Menu -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <ul id="navLinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./review.html">Reviews</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+    
+                <!-- AUTH buttons inside mobile menu -->
+                <div class="mobile-actions">
+                    <a href="#" class="login">Login</a>
+                    <a href="#" class="signup">Sign Up</a>
+                </div>
+            </ul>
+    
+            <!-- Desktop Buttons -->
+            <div class="actions">
+                <a href="#" class="login">Login</a>
+                <a href="#" class="signup">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="review-hero fade-in">
+        <h1>What Our Queens Are Saying</h1>
+        <p>Real reviews from beautiful women who love our collections.</p>
+    </section>
+    
+    
+    <!-- PRODUCT REVIEW GRID -->
+    <section class="reviews-section">
+    
+        <div class="review-card slide-up">
+            <img src="https://cdn.punchng.com/wp-content/uploads/2019/03/16201813/Amanda-Ebeye.jpg" alt="">
+            <h2>Elegant Floral Gown</h2>
+            <div class="stars">
+                ★★★★★
+            </div>
+            <p>“This dress is a masterpiece! It fits perfectly and the material is top-notch. I felt like a princess wearing it.”</p>
+            <h4>- Amanda</h4>
+        </div>
+    
+        <div class="review-card slide-up">
+            <img src="https://cdn.punchng.com/wp-content/uploads/2019/03/16201813/Amanda-Ebeye.jpg" alt="">
+            <h2>Luxury Handbag</h2>
+            <div class="stars">★★★★☆</div>
+            <p>“Very stylish and compact. I love how it complements all my outfits.”</p>
+            <h4>- Melisa</h4>
+        </div>
+    
+        <div class="review-card slide-up">
+            <img src="https://cdn.punchng.com/wp-content/uploads/2019/03/16201813/Amanda-Ebeye.jpg" alt="">
+            <h2>Classic Heels</h2>
+            <div class="stars">★★★★★</div>
+            <p>“Extremely comfortable! I walked for hours without pain. Highly recommended!”</p>
+            <h4>- Sarah</h4>
+        </div>
+    
+    </section>
+    
+    
+    <!-- TESTIMONIAL SLIDER -->
+    <section class="testimonial-container zoom-in">
+        <h1>Customer Testimonials</h1>
+    
+        <div class="slider">
+            <div class="slide active">
+                <p>“I always shop here. The quality is unmatched and delivery is fast!”</p>
+                <h3>- Rita</h3>
+            </div>
+    
+            <div class="slide">
+                <p>“Affordable and stylish. I love how feminine their clothes make me feel.”</p>
+                <h3>- Monique</h3>
+            </div>
+    
+            <div class="slide">
+                <p>“The packaging alone made me fall in love. Premium service!”</p>
+                <h3>- Sophia</h3>
+            </div>
+        </div>
+    
+        <div class="slider-btns">
+            <i class="fa-solid fa-chevron-left" id="prevBtn"></i>
+            <i class="fa-solid fa-chevron-right" id="nextBtn"></i>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="us">
+                <h3>Thrift By Us</h3>
+                <p>We are committed to providing the best fashion products that blend style, comfort, and quality.</p>
+            </div>
+            <div class="quick">
+                <h1>Quick Links</h1>
+                <a href="/privacy.html">Privacy & Policy</a>
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+            <div class="contact">
+                <h1>Contact Us</h1>
+                <p><i class="fa-solid fa-envelope"></i>info@nothing.com</p>
+                <p><i class="fa-solid fa-phone"></i>+234 000 000 00</p>
+            </div>
+        </div>
+        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* HERO */
+        .about-hero {
+            text-align: center;
+            padding: 140px 20px 80px;
+            background: linear-gradient(#00000046, #00000062),
+            url("https://ilovekoop.com/cdn/shop/collections/19_ac655289-5b48-4985-a878-f71ac6cca967.png?v=1731419433&width=2400");
+            background-position: center;
+            background-size: cover;
+            color: white;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+        }
+        .about-hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* BRAND STORY */
+        .section {
+            width: 90%;
+            margin: auto;
+            padding: 70px 0;
+        }
+
+        .brand-story {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .story-content {
+            flex: 1;
+        }
+
+        .story-content h2 {
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+
+        .story-img img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 12px;
+        }
+
+        .brand-content {
+            color: #000;
+        }
+
+        /* MISSION & VISION */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .mv-grid {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .mv-card {
+            background: #f8f8f8;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .mv-card i {
+            font-size: 35px;
+            margin-bottom: 15px;
+            color: #4CAF50;
+        }
+
+        /* TEAM */
+        .team-grid {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        .team-card {
+            text-align: center;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+
+        .team-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* CTA */
+        .cta-banner {
+            text-align: center;
+            padding: 80px 20px;
+            background: #4CAF50;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .cta-btn {
+            background: white;
+            color: #4CAF50;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html" class="logo">Logo</a>
+    
+            <!-- Hamburger Menu -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <ul id="navLinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./review.html">Reviews</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+    
+                <!-- AUTH buttons inside mobile menu -->
+                <div class="mobile-actions">
+                    <a href="#" class="login">Login</a>
+                    <a href="#" class="signup">Sign Up</a>
+                </div>
+            </ul>
+    
+            <!-- Desktop Buttons -->
+            <div class="actions">
+                <a href="#" class="login">Login</a>
+                <a href="#" class="signup">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+      <!-- HERO SECTION -->
+      <section class="about-hero">
+        <h1>About Us</h1>
+        <p>Discover the story behind our fashion brand made for confident women.</p>
+    </section>
+
+    <!-- BRAND STORY -->
+    <section class="brand-story section">
+        <div class="story-content">
+            <h2>Our Story</h2>
+            <p>
+                Thrift By Us was born out of a passion for timeless fashion and the desire 
+                to help every lady feel confident and beautiful. What started as a small collection 
+                of curated thrift pieces has evolved into a growing brand loved by women worldwide.
+            </p>
+            <p>
+                Our commitment is simple: premium quality, comfort, and style—without breaking the bank.
+            </p>
+        </div>
+
+        <div class="story-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy4qvjHHdqZPa5XlcF0XPtPlSit733wO0hQg&s" alt="">
+        </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="mission-vision section">
+        <h2 class="section-title">Our Mission & Vision</h2>
+
+        <div class="mv-grid">
+            <div class="mv-card">
+                <i class="fa-solid fa-bullseye"></i>
+                <h3>Our Mission</h3>
+                <p>
+                    To empower women through premium yet affordable fashion 
+                    that enhances confidence and self-expression.
+                </p>
+            </div>
+
+            <div class="mv-card">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Our Vision</h3>
+                <p>
+                    To become Africa’s leading destination for elegant and 
+                    sustainable ladies’ fashion collections.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team section">
+        <h2 class="section-title">Meet the Team</h2>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy4qvjHHdqZPa5XlcF0XPtPlSit733wO0hQg&s" alt="">
+                <h3>Amanda John</h3>
+                <p>Creative Director</p>
+            </div>
+
+            <div class="team-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy4qvjHHdqZPa5XlcF0XPtPlSit733wO0hQg&s" alt="">
+                <h3>Monica West</h3>
+                <p>Brand Strategist</p>
+            </div>
+
+            <div class="team-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy4qvjHHdqZPa5XlcF0XPtPlSit733wO0hQg&s" alt="">
+                <h3>Sarah Smith</h3>
+                <p>Fashion Consultant</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+        <h2>Join Thousands of Happy Shoppers</h2>
+        <p>Quality fashion that gives you confidence—every single day.</p>
+        <a href="./products.html" class="cta-btn">Shop Now</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="us">
+                <h3>Thrift By Us</h3>
+                <p>We are committed to providing the best fashion products that blend style, comfort, and quality.</p>
+            </div>
+            <div class="quick">
+                <h1>Quick Links</h1>
+                <a href="#">Privacy & Policy</a>
+                <a href="#">Reviews</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="contact">
+                <h1>Contact Us</h1>
+                <p><i class="fa-solid fa-envelope"></i>info@nothing.com</p>
+                <p><i class="fa-solid fa-phone"></i>+234 000 000 00</p>
+            </div>
+        </div>
+        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#hero" class="logo">Logo</a>
+    
+            <!-- Hamburger Menu -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <ul id="navLinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./review.html">Reviews</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+    
+                <!-- AUTH buttons inside mobile menu -->
+                <div class="mobile-actions">
+                    <a href="#" class="login">Login</a>
+                    <a href="#" class="signup">Sign Up</a>
+                </div>
+            </ul>
+    
+            <!-- Desktop Buttons -->
+            <div class="actions">
+                <a href="#" class="login">Login</a>
+                <a href="#" class="signup">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Explore Collections</h1>
+            <p>
+                Discover timeless fashion designed for bold, confident women. From everyday essentials to statement pieces, our collection empowers you to express every side of your style. Step into elegance, embrace confidence, and let your wardrobe tell your story.
+            </p>
+        </div>
+    </section>
+
+    <section id="product">
+        <div class="product-content">
+            <div class="product-header">
+                <div></div>
+                <h2>Featured Products</h2>
+                <div></div>
+            </div>
+            <p>
+                Discover our handpicked selection of featured products, showcasing the best of our collection with exclusive designs and top-notch quality.
+            </p>
+        </div>
+
+        <section class="cards-container">
+            <div class="card">
+                <img src="./images/card1.png" alt="Card Image 1">
+                <i title="Add to cart" class="fa-solid fa-cart-shopping"></i>
+                <div class="card-info">
+                    <h3>Elegant Dress</h3>
+                    <p class="money">$120.00</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, tempore.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/card2.png" alt="Card Image 2">
+                <i title="Add to cart" class="fa-solid fa-cart-shopping"></i>
+                <div class="card-info">
+                    <h3>Stylish Handbag</h3>
+                    <p class="money">$80.00</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, nostrum!</p>
+                </div>
+
+            </div>
+            <div class="card">
+                <img src="./images/card3.png" alt="Card Image 3">
+                <i title="Add to cart" class="fa-solid fa-cart-shopping"></i>
+                <div class="card-info">
+                    <h3>Classic Heels</h3>
+                    <p class="money">$95.00</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, aperiam!</p>
+                </div>
+            </div>
+        </section>
+        <div class="load-more-container">
+            <a href="/products.html" class="load-more">Load More...</a>
+        </div>
+    </section>
+
+    <section id="elevate">
+        <div>
+            <h1>Ready To Elevate Your Styles?</h1>
+            <p>Join thousands of satisfied customers who have transform their wardrobe with our premium Collections</p>
+            <a href="#">Shop Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="us">
+                <h3>Thrift By Us</h3>
+                <p>We are committed to providing the best fashion products that blend style, comfort, and quality.</p>
+            </div>
+            <div class="quick">
+                <h1>Quick Links</h1>
+                <a href="#">Privacy & Policy</a>
+                <a href="/review.html">Reviews</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+            <div class="contact">
+                <h1>Contact Us</h1>
+                <p><i class="fa-solid fa-envelope"></i>info@nothing.com</p>
+                <p><i class="fa-solid fa-phone"></i>+234 000 000 00</p>
+            </div>
+        </div>
+        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

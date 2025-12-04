@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+/* =====================Navigation menu styles ==================== */
+/* HEADER */
+header {
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* NAVBOX */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    width: 90%;
+    margin: auto;
+}
+
+/* LOGO */
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* NAV LINKS (DESKTOP) */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    transition: 0.3s ease;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 3px;
+    transition: 0.3s ease;
+}
+
+/* Hover underline */
+nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* AUTH BUTTONS - DESKTOP */
+.actions {
+    display: flex;
+    gap: 15px;
+}
+
+.actions a {
+    background-color: white;
+    color: #4CAF50;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.actions a.login {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.mobile-actions {
+    display: none;
+}
+
+/* HAMBURGER BUTTON */
+.menu-toggle {
+    width: 32px;
+    height: 25px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: 0.3s ease;
+}
+
+/* --- MOBILE MENU STYLING --- */
+@media (max-width: 768px) {
+
+    /* Show hamburger */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Hide desktop buttons */
+    .actions {
+        display: none;
+    }
+
+    /* Mobile menu container */
+    nav ul {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        background: #3a9c44;
+        height: 100vh;
+        width: 65%;
+        flex-direction: column;
+        gap: 25px;
+        padding: 40px 25px;
+        transition: 0.4s ease-in-out;
+        box-shadow: -3px 0 8px rgba(0,0,0,0.2);
+    }
+
+    /* Slide-in active state */
+    nav ul.active {
+        right: 0;
+    }
+
+    /* Slide animation */
+    nav ul li {
+        opacity: 0;
+        transform: translateX(30px);
+        transition: 0.3s;
+    }
+
+    nav ul.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Mobile login + signup inside menu */
+    .mobile-actions {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .mobile-actions a {
+        padding: 10px 12px;
+        border-radius: 4px;
+        text-align: center;
+        font-weight: 500;
+        background: white;
+        color: #4CAF50;
+        text-decoration: none;
+    }
+
+    .mobile-actions .login {
+        background: transparent;
+        border: 1px solid white;
+        color: white;
+    }
+
+    /* HAMBURGER ANIMATION */
+    .menu-toggle.open span:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+}
+
+/* ====================Hero section styles================ */
+
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/heroimg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: #e6e6e6;
+    max-width: 800px;
+}
+
+/* ==================== Product Section Styles =================== */
+.product-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+    padding: 50px 0 20px 0;
+}
+
+.product-header div {
+    width: 30px;
+    height: 3px;
+    background-color: #4CAF50;
+}
+
+.product-header h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #333333;
+}
+
+.product-content p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #666666;
+    text-align: center;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==================== Cards Styles =================== */
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 300px;
+    height: auto;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+}
+
+.money {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.card i {
+    color: #037307;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.load-more-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.load-more-container a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ==================== Elevate Your Style Section =================== */
+
+#elevate {
+    background-color: #ebebeb;
+    margin-top: 50px;
+}
+
+#elevate div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    padding: 50px 20px;
+}
+
+#elevate h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+#elevate div p {
+    font-size: 1.1em;
+    color: #666666;
+    max-width: 700px;
+    text-align: center;
+}
+
+#elevate div a {
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ==================== Footer Styles =================== */
+.quick {
+    color: rgb(54, 52, 52);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.quick a {
+    color: rgb(54, 52, 52);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.quick h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact {
+    color: rgb(54, 52, 52);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact a {
+    color: rgb(54, 52, 52);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.contact h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.us h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: rgb(54, 52, 52);
+}
+
+.us p {
+    font-size: 16px;
+    color: rgb(54, 52, 52);
+    line-height: 1.5;
+    max-width: 380px;
+    width: 100%;
+}
+
+.footer-content {
+   display: flex;
+   justify-content: space-between;
+    padding: 40px 80px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+footer > p {
+    background-color: #257d28;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 20px 12px;
+    }
+
+    .us p {
+        text-align: center;
+        font-size: 16px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .product-header h2 {
+        font-size: 1.5em;
+    }
+
+    .product-content > p {
+        font-size: 16px;
+        max-width: 95%;
+
+    }
+
+    .hero-content h1 {
+        font-weight: 500;
+        font-size: 2.6em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+}

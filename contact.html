@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+      /* CONTACT HERO */
+.contact-hero {
+    text-align: center;
+    padding: 120px 20px 50px;
+    background: linear-gradient(to bottom, #fce7f3, #ffffff);
+    animation: fadeDown 1s ease forwards;
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    color: #4CAF50;
+}
+
+.contact-hero p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* CONTACT CONTAINER */
+.contact-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CONTACT INFO */
+.contact-info {
+    display: grid;
+    gap: 20px;
+}
+
+.info-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    text-align: center;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.info-card i {
+    font-size: 35px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* CONTACT FORM */
+.contact-form {
+    background: #fff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Floating Label */
+.input-group label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 0 5px;
+    color: #999;
+    pointer-events: none;
+    transition: .3s;
+}
+
+input:focus + label,
+textarea:focus + label,
+input:valid + label,
+textarea:valid + label {
+    top: -8px;
+    font-size: 0.8rem;
+    color: #4CAF50;
+}
+
+/* BUTTON */
+.send-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #4CAF50;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.send-btn:hover {
+    background: #4CAF50;
+}
+
+/* MAP SECTION */
+.map-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.map-section h2 {
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+/* PURE CSS FADE-UP (On Load) */
+.fade-up {
+    opacity: 0;
+    animation: fadeUp 1.2s ease forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HERO ANIMATION */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html" class="logo">Logo</a>
+    
+            <!-- Hamburger Menu -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <ul id="navLinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./review.html">Reviews</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+    
+                <!-- AUTH buttons inside mobile menu -->
+                <div class="mobile-actions">
+                    <a href="#" class="login">Login</a>
+                    <a href="#" class="signup">Sign Up</a>
+                </div>
+            </ul>
+    
+            <!-- Desktop Buttons -->
+            <div class="actions">
+                <a href="#" class="login">Login</a>
+                <a href="#" class="signup">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+
+   <!-- ================= CONTACT SECTION ================= -->
+<section class="contact-hero">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you. Reach out for inquiries, support, or collaborations.</p>
+</section>
+
+<section class="contact-container">
+    <!-- CONTACT INFO -->
+    <div class="contact-info fade-up">
+        <div class="info-card">
+            <i class="fa-solid fa-phone"></i>
+            <h3>Phone</h3>
+            <p>+234 000 000 0000</p>
+        </div>
+
+        <div class="info-card">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email</h3>
+            <p>info@nothing.com</p>
+        </div>
+
+        <div class="info-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Address</h3>
+            <p>Uyo, Akwa Ibom — Nigeria</p>
+        </div>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="contact-form fade-up">
+        <h2>Send Us a Message</h2>
+        <form>
+            <div class="input-group">
+                <input type="text" required>
+                <label>Name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+
+            <div class="input-group">
+                <textarea required></textarea>
+                <label>Your Message</label>
+            </div>
+
+            <button type="submit" class="send-btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- MAP SECTION -->
+<section class="map-section fade-up">
+    <h2>Find Us</h2>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.134142180745!2d7.9248!3d5.038963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1067d2bb93d78d0f%3A0x38c8da2c3f0f0f7!2sUyo%2C%20Akwa%20Ibom!5e0!3m2!1sen!2sng!4v1700000000000"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+</section>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="us">
+                <h3>Thrift By Us</h3>
+                <p>We are committed to providing the best fashion products that blend style, comfort, and quality.</p>
+            </div>
+            <div class="quick">
+                <h1>Quick Links</h1>
+                <a href="#">Privacy & Policy</a>
+                <a href="#">Reviews</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="contact">
+                <h1>Contact Us</h1>
+                <p><i class="fa-solid fa-envelope"></i>info@nothing.com</p>
+                <p><i class="fa-solid fa-phone"></i>+234 000 000 00</p>
+            </div>
+        </div>
+        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
