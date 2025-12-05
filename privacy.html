@@ -3,38 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Privacy Policy</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* PRIVACY SECTION */
+        .privacy-section {
+            padding: 80px 20px;
+            background: #f8f9fa;
+            font-family: "Inter", sans-serif;
+        }
+
+        .privacy-container {
+            max-width: 900px;
+            margin: auto;
+            /* background: #fff; */
+            padding: 40px 0;
+            /* border-radius: 12px; */
+            /* box-shadow: 0px 4px 20px rgba(0,0,0,0.06); */
+        }
+
+        .privacy-container h1 {
+            font-size: 35px;
+            margin-bottom: 20px;
+            color: #222;
+            font-weight: 700;
+        }
+
+        .privacy-container h2 {
+            margin-top: 25px;
+            color: #333;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .privacy-container p {
+            margin-top: 10px;
+            line-height: 1.7;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .last-updated {
+            margin-top: 30px;
+            font-style: italic;
+            color: #777;
+            font-size: 15px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .privacy-container {
+                padding: 25px;
+            }
+
+            .privacy-container h1 {
+                font-size: 28px;
+            }
+
+            .privacy-container h2 {
+                font-size: 18px;
+            }
+        }
+
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <a href="./index.html" class="logo">Logo</a>
-    
+
             <!-- Hamburger Menu -->
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-    
+
             <ul id="navLinks">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./products.html">Products</a></li>
                 <li><a href="./review.html">Reviews</a></li>
                 <li><a href="./about.html">About</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-    
-                <!-- AUTH buttons inside mobile menu -->
+                <li><a href="./contact.html">Contact</a></li>
+
                 <div class="mobile-actions">
                     <a href="#" class="login">Login</a>
                     <a href="#" class="signup">Sign Up</a>
                 </div>
             </ul>
-    
-            <!-- Desktop Buttons -->
+
             <div class="actions">
                 <a href="#" class="login">Login</a>
                 <a href="#" class="signup">Sign Up</a>
@@ -42,9 +101,38 @@
         </nav>
     </header>
 
+    <!-- ============================= -->
+    <!--       PRIVACY POLICY SECTION   -->
+    <!-- ============================= -->
+    <section class="privacy-section">
+        <div class="privacy-container">
+            <h1>Privacy Policy</h1>
+            <p>Welcome to our Privacy Policy page. Your privacy is very important to us. This document outlines the types of information we collect and how we use, protect, and safeguard your data.</p>
 
+            <h2>1. Information We Collect</h2>
+            <p>We may collect personal data including your name, email address, phone number, and other details when you interact with our website or services.</p>
 
+            <h2>2. How We Use Your Information</h2>
+            <p>Your data is used to improve user experience, respond to inquiries, process transactions, and enhance our website’s performance.</p>
 
+            <h2>3. Cookies</h2>
+            <p>We use cookies to track user activity, improve site navigation, and deliver personalized content.</p>
+
+            <h2>4. Data Protection</h2>
+            <p>We implement strong security measures to protect your information from unauthorized access, alteration, or disclosure.</p>
+
+            <h2>5. Third-Party Sharing</h2>
+            <p>We do not sell or trade your personal information. Data may only be shared with trusted third parties who assist in operating our website or serving you.</p>
+
+            <h2>6. Your Rights</h2>
+            <p>You have the right to request access, modification, or deletion of your personal data at any time.</p>
+
+            <h2>7. Updates to This Policy</h2>
+            <p>We may update this Privacy Policy occasionally. Any changes will be posted on this page.</p>
+
+            <p class="last-updated">Last updated: January 2025</p>
+        </div>
+    </section>
 
     <footer>
         <div class="footer-content">
