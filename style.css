@@ -135,7 +135,7 @@ nav ul li a:hover::after {
         position: fixed;
         top: 60px;
         right: -100%;
-        background: #4f3a74;
+        background: #c2b3dd;
         height: 100vh;
         width: 65%;
         flex-direction: column;
