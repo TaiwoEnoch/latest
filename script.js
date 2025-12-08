@@ -39,52 +39,14 @@ const revealOnScroll = () => {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
-
-
-// SCROLL REVEAL EFFECT
-// const showElements = document.querySelectorAll(".reveal, .slide-up, .zoom-in, .mv-card, .team-card, .cta-banner");
-
-// function showOnScroll() {
-//     showElements.forEach(el => {
-//         const elementTop = el.getBoundingClientRect().top;
-//         if (elementTop < window.innerHeight - 100) {
-//             el.classList.add("active");
-//         }
-//     });
-// }
-
-// window.addEventListener("scroll", showOnScroll);
-// window.addEventListener("load", showOnScroll);
-
-
 // NAVBAR SCROLL EFFECT
-const navbar = document.getElementById("navbar");
+// const navbar = document.getElementById("navbar");
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-});
+// window.addEventListener("scroll", () => {
+//     if (window.scrollY > 50) {
+//         navbar.classList.add("scrolled");
+//     } else {
+//         navbar.classList.remove("scrolled");
+//     }
+// });
 
-
-
-// SCROLL ANIMATION Contct
-// const faders = document.querySelectorAll('.fade-up');
-
-// const appearOptions = {
-//     threshold: 0.3
-// };
-
-// const appearOnScroll = new IntersectionObserver((entries, observer) => {
-//     entries.forEach(entry => {
-//         if(entry.isIntersecting){
-//             entry.target.classList.add("appear");
-//             observer.unobserve(entry.target);
-//         }
-//     });
-// }, appearOptions);
-
-// faders.forEach(fade => appearOnScroll.observe(fade));
-// END OF SCRIPT
