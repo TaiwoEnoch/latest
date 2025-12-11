@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Filtering System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .filter-buttons {
+            margin-bottom: 20px;
+        }
+
+        .filter-buttons button {
+            padding: 10px 18px;
+            margin-right: 10px;
+            border: none;
+            background: #ddd;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .filter-buttons button.active {
+            background: #007bff;
+            color: #fff;
+        }
+
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            width: 180px;
+            padding: 20px;
+            background: #f8f8f8;
+            margin: 10px;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript Filtering System</h2>
+
+    <!-- FILTER BUTTONS -->
+    <div class="filter-buttons">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="cars">Cars</button>
+        <button data-filter="houses">Houses</button>
+        <button data-filter="phones">Phones</button>
+    </div>
+
+    <!-- ITEMS TO FILTER -->
+    <div class="items">
+        <div class="item" data-category="cars">🚗 Toyota Camry</div>
+        <div class="item" data-category="cars">🚙 Honda CRV</div>
+
+        <div class="item" data-category="houses">🏡 Duplex House</div>
+        <div class="item" data-category="houses">🏘️ Bungalow</div>
+
+        <div class="item" data-category="phones">📱 iPhone 14</div>
+        <div class="item" data-category="phones">📱 Samsung S23</div>
+    </div>
+
+    <!-- JAVASCRIPT FILTER LOGIC -->
+    <script>
+        const buttons = document.querySelectorAll(".filter-buttons button");
+        const items = document.querySelectorAll(".item");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+
+                // Remove active style from all buttons
+                buttons.forEach(btn => btn.classList.remove("active"));
+
+                // Add active style to clicked button
+                button.classList.add("active");
+
+                const filter = button.getAttribute("data-filter");
+
+                items.forEach(item => {
+                    const category = item.getAttribute("data-category");
+
+                    if (filter === "all") {
+                        item.style.display = "block";
+                    } else {
+                        if (category === filter) {
+                            item.style.display = "block";
+                        } else {
+                            item.style.display = "none";
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

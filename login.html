@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #login-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            margin-top: 3rem;
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-family: 'Inter', sans-serif;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #311c50;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 15px;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html" class="logo">Logo</a>
+    
+            <!-- Hamburger Menu -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <ul id="navLinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./review.html">Reviews</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+    
+                <!-- AUTH buttons inside mobile menu -->
+                <div class="mobile-actions">
+                    <a href="/login.html" class="login">Login</a>
+                    <a href="/signup.html" class="signup">Sign Up</a>
+                </div>
+            </ul>
+    
+            <!-- Desktop Buttons -->
+            <div class="actions">
+                <a href="/login.html" class="login">Login</a>
+                <a href="/signup.html" class="signup">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="login-section">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+
+                <p class="signup-link">
+                    Don't have an account? <a href="/signup.html">Sign Up</a>
+                </p>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="us">
+                <h3>Thrift By Us</h3>
+                <p>We are committed to providing the best fashion products that blend style, comfort, and quality.</p>
+            </div>
+            <div class="quick">
+                <h1>Quick Links</h1>
+                <a href="/privacy.html">Privacy & Policy</a>
+                <a href="/review.html">Reviews</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+            <div class="contact">
+                <h1>Contact Us</h1>
+                <p><i class="fa-solid fa-envelope"></i>info@nothing.com</p>
+                <p><i class="fa-solid fa-phone"></i>+234 000 000 00</p>
+            </div>
+        </div>
+        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
